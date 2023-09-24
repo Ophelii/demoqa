@@ -9,3 +9,4 @@ class ModalDialogs(BasePage):
         super().__init__(driver, self.base_url)
 
         self.submenu_btns = WebElement(driver, 'div:nth-child(3) > div > ul > li')
+        self.main_page_icon = WebElement(driver, '#app > header > a > img')

@@ -5,6 +5,7 @@ import time
 
 def test_login_form(browser):
     form_page = FormPage(browser)
+
     form_page.visit()
     assert not form_page.modal_dialog.exist()
     time.sleep(2)
@@ -17,11 +18,11 @@ def test_login_form(browser):
     form_page.user_hobbies.click()
     form_page.current_address.send_keys('Spb')
     form_page.user_state.click()
-    time.sleep(3)
+    time.sleep(2)
     form_page.state_select.click()
     time.sleep(2)
     form_page.user_city.click()
-    time.sleep(3)
+    time.sleep(2)
     form_page.city_select.click()
     time.sleep(2)
     form_page.btn_submit.click_force()
