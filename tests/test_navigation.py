@@ -2,6 +2,7 @@ from conftest import browser
 from pages.elements_page import ElementsPage
 from pages.demoqa import DemoQA
 
+
 def test_navigation(browser):
     demo_qa_page = DemoQA(browser)
     elements_page = ElementsPage(browser)

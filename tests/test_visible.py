@@ -2,6 +2,7 @@ from conftest import browser
 from pages.elements_page import ElementsPage
 import time
 
+
 def test_visible_btn_sidebar(browser):
     elements_page = ElementsPage(browser)
 
