@@ -22,5 +22,6 @@ class FormPage(BasePage):
         self.user_city = WebElement(driver, '#city')
         self.city_select = WebElement(driver, '#react-select-4-option-0')
         self.state_select = WebElement(driver, '#react-select-3-option-0')
-
+        self.state_select_xpath = WebElement(driver, '//div[@class="css-1uccc91-singleValue" and text()="NCR"]', 'xpath')
+        self.user_form = WebElement(driver, '#userForm')
 

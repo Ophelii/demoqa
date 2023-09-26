@@ -14,7 +14,7 @@ def test_login_form(browser):
     form_page.user_email.send_keys('testers@tt.tt')
     form_page.gender_radio_1.click_force()
     form_page.user_number.send_keys('9992223344')
-    form_page.user_hobbies.scrolling_to()
+    form_page.user_hobbies.scroll_to_element()
     form_page.user_hobbies.click()
     form_page.current_address.send_keys('Spb')
     form_page.user_state.click()

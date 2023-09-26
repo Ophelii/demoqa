@@ -3,11 +3,11 @@ from conftest import browser
 from pages.checkbox import CheckBox
 
 
-# def test_find_elements(browser):
-#     elements_page = ElementsPage(browser)
+def test_find_elements(browser):
+    elements_page = ElementsPage(browser)
 
-#     elements_page.visit()
-#     assert elements_page.btns_first_menu.check_count_elements(9)
+    elements_page.visit()
+    assert elements_page.btns_first_menu.check_count_elements(9)
 
 def test_count_checkbox(browser):
     checkbox = CheckBox(browser)
