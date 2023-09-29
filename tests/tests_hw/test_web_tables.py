@@ -43,3 +43,4 @@ def test_web_tables_elements(browser):
     assert 'Svetlana' and 'Petrovna' and 'petrovna88@ttt.tt' and '37' and '8000' and 'accounting' not in web_tables.row_4.get_text()
     assert not web_tables.row_4.get_dom_attribute('class') == 'rt-tr -even'
     assert web_tables.row_4.get_dom_attribute('class') == 'rt-tr -padRow -even'
+
