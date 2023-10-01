@@ -3,7 +3,6 @@ from conftest import browser
 from pages.browser_tab import BrowserTab
 
 
-
 def test_browser_tab(browser):
     browser_tab = BrowserTab(browser)
 

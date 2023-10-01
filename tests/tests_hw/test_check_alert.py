@@ -2,6 +2,7 @@ import time
 from conftest import browser
 from pages.alerts import Alerts
 
+
 def test_timer_alert(browser):
     alert_page = Alerts(browser)
 

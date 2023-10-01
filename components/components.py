@@ -1,6 +1,8 @@
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 class WebElement:
     def __init__(self, driver, locator=None, locator_type='css'):
@@ -79,3 +81,22 @@ class WebElement:
     def check_css(self, style, value=''):
         return self.find_element().value_of_css_property(style) == value
 
+    def check_attribute_value(self, name, expected_value:str):
+        actual_value = self.get_dom_attribute(name)
+        if actual_value == expected_value:
+            return True
+        return False
+
+        return check_attribute
+
+    # def wait_untill(self, name:str, value=''):
+    #     return WebDriverWait(self.driver, 100).until(EC.presence_of_element_located(self.find_element().get_dom_attribute() == value))
+
+
+
+
+        #
+        # from selenium.webdriver import ActionChains
+        # action_chains = ActionChains(browser)
+        # action_chains.drag_and_drop(element, target).perform()
+        #

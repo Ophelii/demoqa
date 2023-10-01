@@ -4,6 +4,7 @@ from components.components import WebElement
 
 class WebTables(BasePage):
     def __init__(self, driver):
+        self.column = None
         self.locator = None
         self.base_url = 'https://demoqa.com/webtables/'
         super().__init__(driver, self.base_url)
@@ -33,7 +34,13 @@ class WebTables(BasePage):
         self.previous_btn = WebElement(driver, ' div.-previous > button')
         self.next_btn = WebElement(driver, 'div.-next > button')
         self.span_page_info = WebElement(driver, 'span.-pageInfo')
-        # self.page_info = WebElement(driver, '#app > div > div > div.row > div.col-12.mt-4.col-md-6 > div.web-tables-wrapper > div.ReactTable.-striped.-highlight > div.pagination-bottom > div > div.-center > span.-pageInfo > span', 'xpath')
         self.page_info = WebElement(driver, 'span.-pageInfo')
         self.page_input = WebElement(driver, 'input[type=number]')
-
+        self.all_delete_btns = WebElement(driver, '//*[@title="Delete"]', 'xpath')
+        self.column_headers = WebElement(driver, 'div.rt-th.rt-resizable-header')
+        self.column_1 = WebElement(driver, '//*[@id="app"]/div/div/div[2]/div[2]/div[2]/div[3]/div[1]/div[1]/div/div[1]', 'xpath')
+        self.column_2 = WebElement(driver, 'div.rt-thead.-header > div > div:nth-child(2)')
+        self.column_3 = WebElement(driver, 'div.rt-thead.-header > div > div:nth-child(3)')
+        self.column_4 = WebElement(driver, 'div.rt-thead.-header > div > div:nth-child(4)')
+        self.column_5 = WebElement(driver, 'div.rt-thead.-header > div > div:nth-child(5)')
+        self.column_6 = WebElement(driver, 'div.rt-thead.-header > div > div:nth-child(6)')

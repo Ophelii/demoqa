@@ -1,4 +1,3 @@
-# from selenium.common.exceptions import NoSuchElementException
 from pages.base_page import BasePage
 from components.components import WebElement
 
@@ -13,7 +12,7 @@ class DemoQA(BasePage):
         self.footer_text = WebElement(driver, '#app > footer')
         #  self.widgets_btn = WebElement(driver, '#app > div > div > div.home-body > div > div:nth-child(4) > div')
         #  self.widg_accord_btn = WebElement(driver, 'div:nth-child(4) > div > ul > li:nth-child(1)')
-
+        self.h5_titles = WebElement(driver, 'div > h5')
 
 
 

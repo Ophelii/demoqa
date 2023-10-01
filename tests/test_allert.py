@@ -13,6 +13,7 @@ def test_allert(browser):
     assert alerts_page.alert()
     alerts_page.alert().accept()
 
+
 def test_alert_text(browser):
     alerts_page = Alerts(browser)
 
@@ -23,6 +24,7 @@ def test_alert_text(browser):
     alerts_page.alert().accept()
     assert not alerts_page.alert()
 
+
 def test_confirm(browser):
     alerts_page = Alerts(browser)
 
@@ -32,7 +34,8 @@ def test_confirm(browser):
     alerts_page.alert().dismiss()
     assert alerts_page.result_text.get_text() == "You selected Cancel"
 
-def test_promt(browser):
+
+def test_prompt(browser):
     alerts_page = Alerts(browser)
 
     alerts_page.visit()
