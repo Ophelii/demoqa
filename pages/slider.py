@@ -10,3 +10,4 @@ class Slider(BasePage):
         self.slider_container = WebElement(driver, '#sliderContainer > div.col-9 > span > input')
         self.slider_value = WebElement(driver, '#sliderValue')
         self.slider_btn = WebElement(driver, 'div.col-9 > span > div')
+        self.slider_btn_arrow = WebElement(driver, '#sliderContainer > div.col-9 > span > div > div.range-slider__tooltip__arrow')
